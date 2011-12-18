@@ -1,7 +1,7 @@
 {% extends "formbase.html" %}
 
 {% block entry %}
-{% if not entry %}  
+{% if not entry %}
   New Entry
 {% else %}
   Editing {{entry.title}}
@@ -32,12 +32,12 @@ Title
 </label>
 
 <div>
-<input id="title" 
+<input id="title"
 class="field text large"
-name="title" 
+name="title"
 tabindex="1"
-type="text" maxlength="255" value="{{entry.title}}" 
-  /> 
+type="text" maxlength="255" value="{{entry.title}}"
+  />
 </div>
 
 
@@ -53,10 +53,10 @@ Content
 
 <div>
 
-<textarea id="body" 
+<textarea id="body"
 class="field textarea large"
-name="body" 
-rows="10" cols="50" 
+name="body"
+rows="10" cols="50"
 tabindex="2"  >{{entry.body}}</textarea>
 </div>
 
@@ -75,10 +75,10 @@ Markup
 
 <div>
 
-<select class="field select medium" 
-id="markup" 
+<select class="field select medium"
+id="markup"
 name="markup"
-tabindex="3"> 
+tabindex="3">
 <option
   {% ifequal  entry.markdown "markdown" %}
   SELECTED
@@ -86,11 +86,11 @@ tabindex="3">
   value="markdown">Markdown</option>
 <option {% ifequal  entry.markdown "textile" %}
   SELECTED{% endifequal  %}
-  value="textile" 
+  value="textile"
 >Textile</option>
 <option {% ifequal  entry.markdown "plain" %}
   SELECTED{% endifequal  %}
-  value="plain " 
+  value="plain "
 >Plain </option>
 </select>
 </div>
@@ -107,12 +107,12 @@ Tags
 </label>
 
 <div>
-<input id="tags" 
+<input id="tags"
 class="field text large"
-name="tags" 
+name="tags"
 tabindex="4"
-type="text" maxlength="255" value="" 
-  /> 
+type="text" maxlength="255" value=""
+  />
 </div>
 
 <p class="instruct " id="instruct5"><small>Tags, separated by space</small></p>
@@ -123,13 +123,13 @@ type="text" maxlength="255" value=""
 Static page
 </label>
 <span>
-<input id="Field112" 
-  name="static" 
-   class="field checkbox" type="checkbox" 
+<input id="Field112"
+  name="static"
+   class="field checkbox" type="checkbox"
 {% if entry.static %}
    checked="True"
 {% endif %}
-   value="1" 
+   value="1"
     tabindex="5"  />
 <label class="choice" for="static">dont show this entry in blog</label>
 </span>
@@ -141,16 +141,16 @@ Static page
 Allow comments
 </label>
 <span>
-<input id="Field113" 
-  name="comments" 
-   class="field checkbox" type="checkbox" 
+<input id="Field113"
+  name="comments"
+   class="field checkbox" type="checkbox"
 {% if entry.comments %}
    checked="True"
 {% endif %}
 {% if not entry %}
-	checked="True"  
+	checked="True"
 {% endif %}
-   value="1" 
+   value="1"
     tabindex="6"  />
 <label class="choice" for="static">Allow users to enter comments on this page.</label>
 </span>

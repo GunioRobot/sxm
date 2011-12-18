@@ -1,4 +1,4 @@
-/* 
+/*
 CSS for Teh blog app - http://teh.appspot.com
 Derived from - http://bret.appspot.com
 License: CC2.5 - http://creativecommons.org/licenses/by/2.5/
@@ -47,7 +47,7 @@ form {
   background-repeat: repeat-x;
   height: 56px;
   position: relative;
-  
+
 }
 
 #logo {
@@ -179,7 +179,7 @@ ul li {
     font-size:1.5em;
     color:#fff;
     text-decoration:none;
-    
+
 }
 .entry h1 a,
 .entry h1 a:visited{
